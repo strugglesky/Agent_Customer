@@ -5,27 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6373b6c-2b14-4f51-b56c-b0de4d97da64" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/config/agent.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/chroma.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/prompts.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/rag.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/external/records.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/扫地机器人100问.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/扫地机器人100问2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/扫拖一体机器人100问.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/故障排除.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/维护保养.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/选购指南.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/config_handler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/file_handler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/logger_handler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/path_tool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/prompt_loader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/factory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prompts/main_prompt.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prompts/rag_summarize.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prompts/report_prompt.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rag/vector_store.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/file_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/file_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/logger_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/logger_handler.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,33 +40,83 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.logger_handler.executor&quot;: &quot;Run&quot;,
-    &quot;Python.path_tool.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/PycharmProjects/Agent_Customer&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.factory.executor": "Run",
+    "Python.file_handler.executor": "Run",
+    "Python.logger_handler.executor": "Run",
+    "Python.path_tool.executor": "Run",
+    "Python.vector_store.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Administrator/PycharmProjects/Agent_Customer",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\PycharmProjects\Agent_Customer" />
       <recent name="C:\Users\Administrator\PycharmProjects\Agent_Customer\.venv\Lib" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.logger_handler">
+  <component name="RunManager" selected="Python.vector_store">
+    <configuration name="factory" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Agent_Customer" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/factory.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="file_handler" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Agent_Customer" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/file_handler.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="logger_handler" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Agent_Customer" />
       <option name="ENV_FILES" value="" />
@@ -114,8 +163,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="vector_store" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Agent_Customer" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/rag" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rag/vector_store.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.vector_store" />
+        <item itemvalue="Python.factory" />
+        <item itemvalue="Python.file_handler" />
         <item itemvalue="Python.logger_handler" />
         <item itemvalue="Python.path_tool" />
       </list>
@@ -137,6 +212,7 @@
       <option name="presentableId" value="Default" />
       <updated>1774062582041</updated>
       <workItem from="1774062583076" duration="12847000" />
+      <workItem from="1774243572350" duration="19745000" />
     </task>
     <servers />
   </component>
@@ -145,6 +221,9 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Agent_Customer$path_tool.coverage" NAME="path_tool Coverage Results" MODIFIED="1774066264574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/Agent_Customer$factory.coverage" NAME="factory Coverage Results" MODIFIED="1774260917433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/Agent_Customer$file_handler.coverage" NAME="file_handler Coverage Results" MODIFIED="1774255906317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/Agent_Customer$vector_store.coverage" NAME="vector_store Coverage Results" MODIFIED="1774322850338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rag" />
     <SUITE FILE_PATH="coverage/Agent_Customer$logger_handler.coverage" NAME="logger_handler Coverage Results" MODIFIED="1774067558234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
   </component>
 </project>

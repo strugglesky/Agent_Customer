@@ -36,12 +36,11 @@ def get_logger(name: str = "agent",
     logger.addHandler(file_handler)
     return logger
 
+
+logger = get_logger()
 if __name__ == '__main__':
     logger = get_logger()
-    logger.info("信息日志")
-    logger.error("错误日志")
-    logger.warning("警告日志")
-    logger.debug("调试日志")
+
 
 
 # # 日志保存的根目录

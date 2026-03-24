@@ -141,4 +141,9 @@ class VectorStoreService:
 
 if __name__ == '__main__':
     vector_store = VectorStoreService()
-    vector_store.load_document()
+    # vector_store.load_document()
+
+    retriever = vector_store.get_retriever()
+    result = retriever.invoke("高级避障功能")
+    for doc in result:
+        print(doc.id, doc.page_content)

@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6373b6c-2b14-4f51-b56c-b0de4d97da64" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/model/factory.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prompts/main_prompt.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prompts/rag_summarize.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prompts/report_prompt.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rag/vector_store.py" afterDir="false" />
+    <list default="true" id="e6373b6c-2b14-4f51-b56c-b0de4d97da64" name="Changes" comment="&#10;'utf-8' codec can't decode byte 0xc7 in position 12: invalid continuation byte">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/file_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/file_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/logger_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/logger_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/扫地机器人100问.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/扫地机器人100问.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/扫地机器人100问2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/扫地机器人100问2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/扫拖一体机器人100问.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/扫拖一体机器人100问.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/故障排除.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/故障排除.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/维护保养.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/维护保养.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/选购指南.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/选购指南.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag/vector_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag/vector_store.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,18 +212,31 @@
       <option name="presentableId" value="Default" />
       <updated>1774062582041</updated>
       <workItem from="1774062583076" duration="12847000" />
-      <workItem from="1774243572350" duration="19745000" />
+      <workItem from="1774243572350" duration="23685000" />
     </task>
+    <task id="LOCAL-00001" summary="&#10;'utf-8' codec can't decode byte 0xc7 in position 12: invalid continuation byte">
+      <option name="closed" value="true" />
+      <created>1774325629586</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1774325629586</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&#10;'utf-8' codec can't decode byte 0xc7 in position 12: invalid continuation byte" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;'utf-8' codec can't decode byte 0xc7 in position 12: invalid continuation byte" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Agent_Customer$path_tool.coverage" NAME="path_tool Coverage Results" MODIFIED="1774066264574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/Agent_Customer$factory.coverage" NAME="factory Coverage Results" MODIFIED="1774260917433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
     <SUITE FILE_PATH="coverage/Agent_Customer$file_handler.coverage" NAME="file_handler Coverage Results" MODIFIED="1774255906317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
-    <SUITE FILE_PATH="coverage/Agent_Customer$vector_store.coverage" NAME="vector_store Coverage Results" MODIFIED="1774322850338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rag" />
+    <SUITE FILE_PATH="coverage/Agent_Customer$vector_store.coverage" NAME="vector_store Coverage Results" MODIFIED="1774332352491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rag" />
     <SUITE FILE_PATH="coverage/Agent_Customer$logger_handler.coverage" NAME="logger_handler Coverage Results" MODIFIED="1774067558234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
   </component>
 </project>

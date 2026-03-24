@@ -4,6 +4,7 @@ from abc import ABC
 from langchain_chroma import Chroma
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+from sympy.codegen.ast import continue_
 
 from utils.config_handler import chroma_conf
 from model.factory import embedding_model
@@ -32,7 +33,7 @@ class VectorStoreService:
         )
 
     # 加载指定目录中的文档数据到向量数据库
-    def load_document(self, data_dir: str = get_abs_path("data")) -> bool | None:
+    def load_document(self, data_dir: str = get_abs_path("data")):
         """
         加载文档到向量数据库
         :param data_dir: 数据目录路径，默认为项目根目录下的 data 文件夹
@@ -53,30 +54,34 @@ class VectorStoreService:
                 return False
 
             logger.info(f"[加载文档数据] 在{data_dir}中找到{len(doc_files)}个文档文件")
-
-            def save_md5_hex(file_path: str = get_abs_path(chroma_conf["md5_hex_store"])) -> bool:
+            # 将md5码保存至指定文件
+            def save_md5_hex(file_path: str, save_path: str = get_abs_path(chroma_conf["md5_hex_store"])) -> bool:
                 """
                 保存文件的md5值
-                :param file_path: 文件存储路径
+                :param file_path: 文件路径
                 :return: None
                 """
                 # 确保文件路径存在
+                if not os.path.exists(save_path):
+                    open(save_path, "w", encoding="utf-8").close()
                 if not os.path.exists(file_path):
-                    open(file_path, "w", encoding="utf-8").close()
+                    logger.warning(f"[加载文档数据] 文件{file_path}不存在")
+                    return False
                 # 计算md5码是否存在
                 md5_hex = get_file_md5_hex(file_path)
-                for line in open(file_path, "r", encoding="utf-8"):
+                # 遍历保存的md5码
+                for line in open(save_path, "r", encoding="utf-8"):
                     # 如果md5码已经存在 返回False
                     if line.strip() == md5_hex:
                         logger.warning(f"[加载文档数据] 文件{file_path}已经存在")
                         return False
                 # 保存md5码到file_path中
-                with open(file_path, "a", encoding="utf-8") as f:
+                with open(save_path, "a", encoding="utf-8") as f:
                     f.write(md5_hex + "\n")
                     logger.info(f"[加载文档数据] 保存文件{file_path}的md5码{md5_hex}保存成功")
                 return True
-
-            all_documents = []
+            # 记录文档上传数量
+            document_count = 0
             # 遍历所有文档文件
             for file_path in doc_files:
                 # 如果文件已经存在
@@ -91,29 +96,37 @@ class VectorStoreService:
                     else:
                         continue
 
-                    all_documents.extend(documents)
+                    if not documents:
+                        logger.error(f"[加载文档数据] 文档{file_path}为空，加载失败")
+                        continue
+
+                    # 使用分词器分割文档
+                    split_docs: list[Document] = self.splitter.split_documents(documents)
+
+                    # 如果分割后的文档为空
+                    if not split_docs:
+                        logger.error(f"[加载文档数据] 分割后的{file_path}为空，加载失败")
+                        continue
+
+                    # 添加到向量数据库
+                    self.vector_store.add_documents(split_docs)
+
+                    document_count += 1
+                    logger.info(f"[加载文档数据] 成功将{file_path}添加到向量数据库")
+
 
                 except Exception as e:
                     logger.error(f"[加载文档数据] 加载文档{file_path}失败：{str(e)}")
                     continue
-            # 如果没有成功加载任何文档
-            if not all_documents:
-                logger.error("[加载文档数据] 没有成功加载任何文档")
-                return False
 
-            # 使用分词器分割文档
-            split_docs: list[Document] = self.splitter.split_documents(all_documents)
 
-            # 添加到向量数据库
-            self.vector_store.add_documents(split_docs)
+            logger.info(f"[加载文档数据] 成功将{document_count}个文档添加到向量数据库")
+            return None
 
-            logger.info(f"[加载文档数据] 成功将{len(split_docs)}个文本块添加到向量数据库")
-            return True
 
         except Exception as e:
             logger.error(f"[加载文档数据] 加载文档失败：{str(e)}", exc_info=True)
-            return False
-
+            return None
 
     # 获取向量数据库的检索器
     def get_retriever(self):

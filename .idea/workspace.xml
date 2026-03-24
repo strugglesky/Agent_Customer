@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6373b6c-2b14-4f51-b56c-b0de4d97da64" name="Changes" comment="&#10;'utf-8' codec can't decode byte 0xc7 in position 12: invalid continuation byte">
+    <list default="true" id="e6373b6c-2b14-4f51-b56c-b0de4d97da64" name="Changes" comment="完成rag_service.py">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agent/tools/agent_tools.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/扫地机器人100问.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/扫地机器人100问.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/扫地机器人100问2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/扫地机器人100问2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/扫拖一体机器人100问.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/扫拖一体机器人100问.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/故障排除.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/故障排除.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/维护保养.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/维护保养.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/选购指南.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/选购指南.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rag/vector_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag/vector_store.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/external/records.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag/rag_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag/rag_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +39,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.agent_tools.executor": "Run",
     "Python.factory.executor": "Run",
     "Python.file_handler.executor": "Run",
     "Python.logger_handler.executor": "Run",
@@ -52,9 +51,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
+    "database.data.extractors.current.id": "Comma-separated (CSV)_id",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Administrator/PycharmProjects/Agent_Customer",
+    "last_opened_file_path": "C:/Users/Administrator/PycharmProjects/Agent_Customer/data/external",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -70,7 +71,30 @@
       <recent name="C:\Users\Administrator\PycharmProjects\Agent_Customer\.venv\Lib" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.vector_store">
+  <component name="RunManager" selected="Python.agent_tools">
+    <configuration name="agent_tools" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Agent_Customer" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/agent/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/agent/tools/agent_tools.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="factory" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Agent_Customer" />
       <option name="ENV_FILES" value="" />
@@ -117,7 +141,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="logger_handler" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="rag_service" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Agent_Customer" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -126,35 +150,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/rag" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/logger_handler.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="path_tool" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Agent_Customer" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/path_tool.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rag/rag_service.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -188,11 +189,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.agent_tools" />
+        <item itemvalue="Python.rag_service" />
         <item itemvalue="Python.vector_store" />
         <item itemvalue="Python.factory" />
         <item itemvalue="Python.file_handler" />
-        <item itemvalue="Python.logger_handler" />
-        <item itemvalue="Python.path_tool" />
       </list>
     </recent_temporary>
   </component>
@@ -212,7 +213,8 @@
       <option name="presentableId" value="Default" />
       <updated>1774062582041</updated>
       <workItem from="1774062583076" duration="12847000" />
-      <workItem from="1774243572350" duration="23685000" />
+      <workItem from="1774243572350" duration="26657000" />
+      <workItem from="1774337878386" duration="5422000" />
     </task>
     <task id="LOCAL-00001" summary="&#10;'utf-8' codec can't decode byte 0xc7 in position 12: invalid continuation byte">
       <option name="closed" value="true" />
@@ -222,7 +224,23 @@
       <option name="project" value="LOCAL" />
       <updated>1774325629586</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="修复了vector_store.py的bug">
+      <option name="closed" value="true" />
+      <created>1774332658069</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1774332658069</updated>
+    </task>
+    <task id="LOCAL-00003" summary="完成rag_service.py">
+      <option name="closed" value="true" />
+      <created>1774338036226</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1774338036226</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,13 +248,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&#10;'utf-8' codec can't decode byte 0xc7 in position 12: invalid continuation byte" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;'utf-8' codec can't decode byte 0xc7 in position 12: invalid continuation byte" />
+    <MESSAGE value="修复了vector_store.py的bug" />
+    <MESSAGE value="完成rag_service.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成rag_service.py" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Agent_Customer$path_tool.coverage" NAME="path_tool Coverage Results" MODIFIED="1774066264574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/Agent_Customer$factory.coverage" NAME="factory Coverage Results" MODIFIED="1774260917433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
     <SUITE FILE_PATH="coverage/Agent_Customer$file_handler.coverage" NAME="file_handler Coverage Results" MODIFIED="1774255906317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
-    <SUITE FILE_PATH="coverage/Agent_Customer$vector_store.coverage" NAME="vector_store Coverage Results" MODIFIED="1774332352491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rag" />
+    <SUITE FILE_PATH="coverage/Agent_Customer$vector_store.coverage" NAME="vector_store Coverage Results" MODIFIED="1774334799865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rag" />
+    <SUITE FILE_PATH="coverage/Agent_Customer$agent_tools.coverage" NAME="agent_tools Coverage Results" MODIFIED="1774343510088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/agent/tools" />
     <SUITE FILE_PATH="coverage/Agent_Customer$logger_handler.coverage" NAME="logger_handler Coverage Results" MODIFIED="1774067558234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
   </component>
 </project>

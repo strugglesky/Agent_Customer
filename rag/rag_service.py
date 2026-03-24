@@ -5,7 +5,7 @@ from langchain_core.prompts import PromptTemplate
 from langchain_core.runnables import RunnableLambda
 from tenacity import retry
 
-from vector_store import VectorStoreService
+from rag.vector_store import VectorStoreService
 from utils.prompt_loader import load_rag_prompts
 from model.factory import chat_model
 
